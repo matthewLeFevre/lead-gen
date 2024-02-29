@@ -14,8 +14,8 @@ const handler: Handler = async () => {
   });
   const leads = await getLeads();
   const csvFileContents = csvStringify(leads.flat());
-  await writeFile("leads.csv", csvFileContents);
-  const data = await readFile("leads.csv");
+  await writeFile("/tmp/leads.csv", csvFileContents);
+  const data = await readFile("/tmp/leads.csv");
   email.send({
     reciever: "scall@portersop.com",
     cc: "matthewlefevre95@gmail.com",
