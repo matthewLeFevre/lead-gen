@@ -17,8 +17,7 @@ const handler: Handler = async () => {
   await writeFile("/tmp/leads.csv", csvFileContents);
   const data = await readFile("/tmp/leads.csv");
   email.send({
-    reciever: "scall@portersop.com",
-    cc: "matthewlefevre95@gmail.com",
+    reciever: ["scall@portersop.com", "matthewlefevre95@gmail.com"],
     subject: "[New Leads] Porter Lead Gen Tool",
     attachment: {
       data: data,
