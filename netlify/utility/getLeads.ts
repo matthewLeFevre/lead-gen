@@ -14,7 +14,7 @@ export default async function getLeads() {
   }/${whence.getDate()}/${whence.getFullYear()}`;
   console.log(whenceString, todayString);
 
-  const queries = ["LLC", "INC"];
+  const queries = ["Law", "Office", "Clinic", "Practice", "INC"];
 
   const results = await Promise.all(
     queries.map(q => bizSearch(q, whenceString, todayString))
