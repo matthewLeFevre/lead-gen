@@ -14,8 +14,8 @@ const handler: Handler = async () => {
   });
   const leads = await getLeads();
   const csvFileContents = csvStringify(leads.flat());
-  await writeFile("leads.csv", csvFileContents);
-  const data = await readFile("leads.csv");
+  await writeFile("/tmp/leads.csv", csvFileContents);
+  const data = await readFile("/tmp/leads.csv");
   email.send({
     reciever: ["matthewlefevre95@gmail.com"],
     subject: "[New Leads] Porter Lead Gen Tool",
