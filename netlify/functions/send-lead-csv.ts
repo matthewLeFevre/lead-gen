@@ -14,10 +14,10 @@ const handler: Handler = async () => {
   });
   const leads = await getLeads();
   const csvFileContents = csvStringify(leads.flat());
-  await writeFile("/tmp/leads.csv", csvFileContents);
-  const data = await readFile("/tmp/leads.csv");
+  await writeFile("leads.csv", csvFileContents);
+  const data = await readFile("leads.csv");
   email.send({
-    reciever: ["scall@portersop.com", "matthewlefevre95@gmail.com"],
+    reciever: ["matthewlefevre95@gmail.com"],
     subject: "[New Leads] Porter Lead Gen Tool",
     attachment: {
       data: data,
