@@ -6,11 +6,17 @@
   "author": "Matthew LeFevre <matthewlefevre95@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "netlify funcitons:serve"
+    "dev": "netlify functions:serve"
   },
   "devDependencies": {
     "@netlify/functions": "^1.4.0",
+    "@types/node": "^20.11.21",
     "typescript": "^5.0.4",
     "yup": "^1.1.1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.523.0",
+    "@everlast-brands/aws-email-sender": "^3.1.0",
+    "axios": "^1.6.7"
   }
 }
