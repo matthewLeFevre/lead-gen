@@ -19,7 +19,11 @@ const handler: Handler = async () => {
     const data = await readFile("/tmp/leads.csv");
     email.send({
       // reciever: ["scall@portersop.com"],
-      reciever: ["mlefevre@everlastbrands.com", "matthewlefevre95@gmail.com"],
+      reciever: [
+        "mlefevre@everlastbrands.com",
+        "matthewlefevre95@gmail.com",
+        "scall@portersop.com",
+      ],
       subject: "[New Leads] Porter Lead Gen Tool",
       attachment: {
         data: data,
